@@ -1,38 +1,20 @@
 ﻿Imports System.Runtime.Remoting.Channels
 
 Module MainModule
-    Dim Name As String = "Mountain Bike"
-
     Sub Main()
-        If True Then
-            Dim Name As String = "Tricycle"
-            Dim ListPrice As Decimal = 59.99
-        End If
+        ' The "New" keyword when declaring a class. This creates an instance of 
+        'that class in memory with slots for each property to be assigned. 
+        Dim prod As New Product
+        Dim sellDate As DateTime
 
 
-        Console.WriteLine(Name)
-        'The following does not compile
-        'Console.WriteLine(ListPrice)
+        prod.SellStartDate = #5/1/2022#
 
+        sellDate = prod.CalculateSellEndDate(30)
+
+        Console.WriteLine(sellDate)
 
         Console.ReadKey()
-
-
-
-        'varibles are declared with the Dim keyword
-        'Dim ProductID As Integer
-        'Dim isActive As Boolean
-        'Dim Name As String
-        'Dim ListPrice As Decimal
-        'Dim SellStartDate As DateTime
-
-        'ProductID = 1
-        'isActive = True
-        'Name = "10 Speed Bike"
-        'ListPrice = 999.99D
-        'SellStartDate = #1/1/2019#
-        'The "#" Is the Type Literal for a DateTime value.
-
 
     End Sub
 
